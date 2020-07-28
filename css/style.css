@@ -28,12 +28,47 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 #skip-nav:focus {top: 0;}
 
 /* header */
-#header {position: fixed; top: 0; left: 0; height: 80px; width: 100%; background: white; z-index: 1000;}
-#header h1 {position: absolute; top: 15px; left: 10px;}
-#gnb {position: absolute; right: 60px; top: 0; font-size: 15px; color: black; height: 80px; z-index: 100; background: powderblue;}
-#gnb > ul > li {float: left; width: 100px; background: pink;}
+#header {position: fixed; top: 0; left: 0; height: 80px; width: 100%; min-width: 1024px; background: white; z-index: 1000;}
+#header::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 1px; background: lightgray;}
+#header h1 {position: absolute; left: 30px; display: inline-block; width: 110px; height: 80px; line-height: 60px; z-index: 1100;}
+
+/* navigation bar */
+#gnb {position: fixed; width: 100%; top: 0; left: 0; z-index: 100;}
+#gnb > ul {float: right;}
+#gnb > ul > li {float: left; text-align: center;}
+#gnb > ul > li + li {margin-left: 20px;}
+#gnb > ul > li > a {position: relative; height: 80px; line-height: 80px; margin: 0 10px; min-width: 80px;  display: inline-block; font-size: 15px;;}
+#gnb > ul > li > a.gnb_title:hover::after {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 3px; background: #000000;}
+#gnb > ul > li > a.gnb_title:hover  {text-decoration: underline;}
+#gnb .gnb_button {background: #fede22; width: 150px; top: 15px; height: 50px; line-height: 50px; border-bottom-left-radius: 30px; border-top-left-radius: 30px; border-bottom-right-radius: 30px; border-top-right-radius: 30px;}
+#gnb > ul > li > ul {position: absolute; left: 0; width: 100%; box-sizing: border-box; padding: 40px 0;  background: white;}
+
+/* 구현이 어려워 웹페이지 참고 */
+.nav-sub {display: table; width: 1080px; margin: auto;}
+.nav-sub-item {display: table-cell; text-align: center; width: 20%;}
+/* ------------------------- */
+
+.nav-sub-item > a {display: inline-block; font-size: 18px; font-weight: 700; margin-top: 20px;}
+.nav-sub-item > a:hover {text-decoration: underline;}
+.nav-sub-item > ul > li {margin: 20px 0;}
+.nav-sub-item > ul > li:hover {text-decoration: underline;} 
+
+
+
+
+
+/* navigation 잘못 짠 것 같은데 뭐가 문제인지 모르겠음 질문해보기! */
+/* 코드 버리고 새로 짜기!
+#gnb {position: absolute; width: 100%; top: 0; font-size: 15px; color: black; height: 80px; z-index: 100; background: powderblue;}
+#gnb > ul {float: right;}
+#gnb > ul > li {float: left; background: pink;}
 #gnb > ul > li + li {margin-left: 5px;}
-#gnb > ul > li > a{position: relative; display: inline-block; width: 100%; text-align: center; height: 80px; line-height: 80px; font-weight: 700; background: plum;}
+#gnb > ul > li > a{position: relative; display: inline-block; width: 100px; text-align: center; height: 80px; line-height: 80px; font-weight: 700; background: plum;}
 #gnb > ul > li:hover > a.gnb_title::after {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 2px; background: #000000; transition: width 0.1s;}
 #gnb > ul > li:hover > a.gnb_title {text-decoration: underline;}
 #gnb .gnb_button {background: #fede22; width: 150px; top: 15px; height: 50px; line-height: 50px; border-bottom-left-radius: 30px; border-top-left-radius: 30px; border-bottom-right-radius: 30px; border-top-right-radius: 30px;}
+
+#gnb > ul > li > ul > li {background: blue; position: absolute; float: left; width: 100vw;}
+*/
+
+/* main */
