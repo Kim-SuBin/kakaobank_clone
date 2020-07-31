@@ -118,11 +118,22 @@ li.table3:hover > ul.sub2 {display: table;}
 #main-loan img {position: absolute; width: 429px; bottom: 0; left: 50%; transform: translate(-50%, 0);}
 #main-loan h3, #main-loan p {color: white;}
 
-#main-card {position: relative; top: 0; left: 0; width: 100%; height: 1062px; background: pink;}
+#main-card {position: relative; top: 0; left: 0; width: 100%; height: 1062px;}
 #main-card div.content {position: absolute; text-align: center; width: 100%; top: 200px; left: 50%; transform: translate(-50%, 0);}
-#main-card a {display: inline-block; background: #f6f6f6; width: 258px; height: 56px; line-height: 56px; text-align: center; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; border-top-left-radius: 15px; border-top-right-radius: 15px; font-size: 16px; color: #333333;}
-#main-card a:hover {text-decoration: underline;}
-#main-card img {display: none;}
+#main-card .content > a {display: inline-block; background: #f6f6f6; width: 258px; height: 56px; line-height: 56px; text-align: center; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; border-top-left-radius: 15px; border-top-right-radius: 15px; font-size: 16px; color: #333333;}
+#main-card .content > a:hover {text-decoration: underline;}
+#main-card .prev {position: absolute; top: 70%; transform: translate(0, -70%); left: 0;}
+#main-card .next {position: absolute; top: 70%; transform: translate(0, -70%); right: 0;}
+
+#main-card div ul li img {position: absolute; display: none; top: 500px; left: 50%; transform: translate(-50%, 0); width: 280px; height: 440.97px;}
+
+/* 이미지 슬라이드 넣기 */
+/* center */
+#main-card div ul li:nth-child(3) img {display: block; z-index: 1;}
+/* left */
+#main-card div ul li:nth-child(2) img {display: block; left: 36%; top: 530px; width: 240px; height: 377.14px;}
+/* right */
+#main-card div ul li:nth-child(4) img {display: block; left: 64%; top: 530px; width: 240px; height: 377.14px;}
 
 #main-it {position: relative; top: 0; left: 0; width: 100%; height: 1062px; background: #f9f9f9;}
 #main-it h3 {position: absolute; display: block; left: 50%; transform: translate(-50%,0); text-align: center; top: 150px;}
