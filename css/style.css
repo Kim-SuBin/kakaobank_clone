@@ -145,3 +145,23 @@ li.table3:hover > ul.sub2 {display: table;}
 #main-it ul li:first-child {left: 12%;}
 #main-it ul li:nth-child(2) {left: 30%}
 #main-it ul li:last-child {right: 12%;}
+
+
+/* footer */
+#footer {position: relative; background: #eeeeee; height: 160px;}
+#footer ul.content {position: absolute; width: 100%; top: 35px; left: 90px; font-size: 11px; color: #666666;}
+#footer ul.content li {position: relative; display: inline-block; padding: 0 20px; height: 20px; line-height: 20px;}
+#footer ul.content li a.bold {font-weight: 700; color: #000000;}
+#footer ul.content li > a:hover {text-decoration: underline;}
+#footer ul.content li + li > a::before {content: ''; position: absolute; left: 0; width: 1px; height: 100%; background: lightgray;}
+
+#footer p {position: absolute; display: inline-block; top: 72px; font-size: 11px; color: #888888;}
+#footer p.contact {left: 110px;}
+#footer p.contact em {font-weight: 700; color: #000000;}
+#footer p.copyright {font-size: 10px; left: 27%;}
+
+#footer ul.site {position: absolute; bottom: 30px; right: 100px;}
+#footer ul.site li {display: inline-block; padding: 0 5px;}
+
+#footer > a {position: absolute; bottom: 10px; left: 110px; font-size: 13px; color: #666666; font-weight: 700; display: block; line-height: 32px; height: 32px; }
+#footer > a img {width: 48px; padding-right: 10px;}
