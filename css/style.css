@@ -135,17 +135,18 @@ li.table3:hover > ul.sub2 {display: table;}
 /* right */
 #main-card div ul li:nth-child(4) img {display: block; left: 64%; top: 530px; width: 240px; height: 377.14px;}
 
+
 #main-it {position: relative; top: 0; left: 0; width: 100%; height: 1062px; background: #f9f9f9;}
 #main-it h3 {position: absolute; display: block; left: 50%; transform: translate(-50%,0); text-align: center; top: 150px;}
 #main-it h3::after {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: -40px; width: 25%; height: 2px; background: black;}
-#main-it img {position: absolute; height: 270px; top: 420px; left: 50%; transform: translate(-50%, 0);}
-#main-it ul li {position: absolute; bottom: 110px; display: inline-block; width: 255px; height: 210px; text-align: center;}
+#main-it > div.content_box > p {display: absolute; display: block;  margin-top: 450px; text-align: center;}
+#main-it div.content_box p img {height: 270px;}
+#main-it ul {position: relative; display: block; width: 100%; left: 0px; text-align: center; height: 210px;}
+#main-it ul li {display: absolute; display: inline-block; width: 255px;}
 #main-it ul li strong {font-size: 18px; color: #000000;}
 #main-it ul li p {font-size: 14px;}
-#main-it ul li:first-child {left: 12%;}
-#main-it ul li:nth-child(2) {left: 30%}
-#main-it ul li:last-child {right: 12%;}
-
+#main-it ul li:nth-child(2) {margin-left: -10px;}
+#main-it ul li:last-child {margin-left: 260px;}
 
 /* footer */
 #footer {position: relative; background: #eeeeee; height: 160px;}
