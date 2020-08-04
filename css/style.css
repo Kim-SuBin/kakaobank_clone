@@ -122,8 +122,8 @@ li.table3:hover > ul.sub2 {display: table;}
 #main-card div.content {position: absolute; text-align: center; width: 100%; top: 200px; left: 50%; transform: translate(-50%, 0);}
 #main-card .content > a {display: inline-block; background: #f6f6f6; width: 258px; height: 56px; line-height: 56px; text-align: center; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; border-top-left-radius: 15px; border-top-right-radius: 15px; font-size: 16px; color: #333333;}
 #main-card .content > a:hover {text-decoration: underline;}
-#main-card .prev {position: absolute; top: 70%; transform: translate(0, -70%); left: 0;}
-#main-card .next {position: absolute; top: 70%; transform: translate(0, -70%); right: 0;}
+#main-card .prev {position: absolute; top: 70%; transform: translate(0, -70%); left: 10%;}
+#main-card .next {position: absolute; top: 70%; transform: translate(0, -70%); right: 10%;}
 
 #main-card div ul li img {position: absolute; display: none; top: 500px; left: 50%; transform: translate(-50%, 0); width: 280px; height: 440.97px;}
 
