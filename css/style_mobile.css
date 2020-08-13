@@ -1,0 +1,81 @@
+@charset 'utf-8';
+/* CSS Document */
+
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, table, blockquote {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 400;}
+header, main, footer, section, article, aside, nav {display: block;}
+a {color: inherit; text-decoration: inherit;}
+a img {border: none;}
+img {vertical-align: middle; max-width: 100%;}
+li {list-style: none;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i.fas, i.far, i.fab {vertical-align: middle; display: inline-block;}
+i.fas span, i.far span, i.fab span {position: absolute; overflow: hidden; text-indent: -999px;}
+.pc {display: none !important;}
+br.only-w {content: '';}
+br.only-w:after {content: '\00a0';}
+.ir-hidden {position: absolute; left: -9999px;}
+
+/* common */
+body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dotum, 'Apple SD Gothic Neo', Helvetica, sans-serif; font-weight: 400; font-size: 14px; color: #222222; background: #ffffff;}
+#wrapper {min-width: 320px; max-width: 850px; overflow: hidden; margin: 0 auto;}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; font-size: 16px; color: #ffffff; background: rgba(0, 0, 0, 0.6); z-index: 10000; transition: top 0.3s;}
+#skip-nav:focus {top: 0;}
+
+/* header */
+#header {position: fixed; top: 0; left: 0; height: 60px; width: 100%; background: white; z-index: 1000;}
+#header::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 1px; background: lightgray;}
+#header h1 {position: absolute; left: 20px; width: 80px; height: 60px; top: 5px;}
+#header a.menu {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%); font-size: 24px; line-height: 0;}
+
+/* navigation bar */
+#gnb {position: fixed; right: -100%; top: 0; width: 100%; height: 100%; background: #ffffff; overflow-y: scroll; z-index: 100;}
+#gnb.open {right: 0;}
+#gnb a.close {position: absolute; right: 20px; top: 20px; width: 25px;}
+#gnb > ul {margin-top: 70px;}
+#gnb > ul > li > a {position: relative; display: block; box-sizing: border-box; margin: 0 20px; padding: 20px 0; font-size: 17px;}
+#gnb > ul > li > a::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 1px; background: lightgray;}
+
+.nav-sub-item > a {background: pink; margin : 0 20px; display: block; box-sizing: border-box; margin: 0 20px; padding: 10px 0; font-size: 15px; margin-top: 5px;}
+.nav-sub-item > ul {margin: 0 20px; background: #F7F7F7;}
+.nav-sub-item > ul > li {background: yellow; display: block; box-sizing: border-box;  padding: 5px 0; font-size: 12px; margin-left: 10px; margin-top: 5px;}
+
+/* 네비게이션바는 어떻게 구현할지에 대해 조금 더 생각해보기!!!!!!! */
+
+
+/* main */
+#main h3 {font-size: 25px; line-height: 1.35; color: #111111;}
+#main p {font-size: 14px; padding: 20px 0; line-height: 1.7; color: #666666;}
+#main div.content_box {position: absolute; left: 50%; transform: translate(-50%, 0); top: 0; width: 100%; height: 100%;}
+#main div.section_line {position: relative; height: 16px; background: #fafafa;}
+
+#main-appstore {position: relative; top: 60px; left: 0; width : 100%; height: 650px; background: #fede22}
+#main-appstore span.img1 img {position: absolute; width: 220px; top: 130px; left: 50%; transform: translate(-50%, 0);}
+#main-appstore span.img2 img {position: absolute; width: 330px; bottom: 0; left: 50%; transform: translate(-50%, 0);}
+#main-appstore div.content {position: absolute; top: 50px; text-align: center; width: 100%;}
+#main-appstore h3 {font-size: 40px; color: #333333;}
+#main-appstore p {display: none;}
+#main-appstore a {display: inline-block; background: white; width: 180px;  height: 58px; line-height: 57px; text-align: center; margin-top: 400px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; font-weight: 700; font-size: 17px; color: #333333;}
+#main-appstore a + a {margin-left: 10px;}
+#main-appstore a > img {padding-right: 10px;}
+#main-appstore a:hover {text-decoration: underline;}
+
+
+
+
+#main-withdrawal {position: relative; top: 0; left: 0; width: 100%; height: 700px; margin-top: 80px;}
+#main-savings {display: none;}
+#main-moim {display: none;}
+#main-26weeks {display: none;}
+#main-foreignRemittance {display: none;}
+#main-loan {display: none;}
+#main-card {display: none;}
+#main-it {display: none;}
+
+#footer {display: none;}
