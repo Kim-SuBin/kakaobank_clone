@@ -142,7 +142,7 @@ li.table3:hover > ul.sub2 {display: table;}
 #main-it > div.content_box > p {display: absolute; display: block;  margin-top: 450px; text-align: center;}
 #main-it div.content_box p img {height: 270px;}
 #main-it ul {position: relative; display: block; width: 100%; left: 0px; text-align: center; height: 210px;}
-#main-it ul li {display: absolute; display: inline-block; width: 255px;}
+#main-it ul li {display: inline-block; width: 255px;}
 #main-it ul li strong {font-size: 18px; color: #000000;}
 #main-it ul li p {font-size: 14px;}
 #main-it ul li:nth-child(2) {margin-left: -10px;}
