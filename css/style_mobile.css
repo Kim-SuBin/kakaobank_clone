@@ -123,4 +123,21 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 #main-it ul li p {font-size: 14px;}
 
 
-#footer {display: none;}
+/* footer */
+#footer {position: relative; background: #eeeeee; height: 160px;}
+#footer ul.content {position: absolute; width: 100%; top: 35px; font-size: 10px; color: #666666;}
+#footer ul.content li {position: relative; display: inline-block; padding: 0 10px; height: 20px; line-height: 20px;}
+#footer ul.content li a.bold {font-weight: 700; color: #000000;}
+#footer ul.content li > a:hover {text-decoration: underline;}
+#footer ul.content li + li > a::before {content: ''; position: absolute; left: 0; width: 1px; height: 100%; background: lightgray;}
+
+#footer p {position: absolute; display: inline-block; top: 72px; font-size: 10px; color: #888888; margin-top: 10px;}
+#footer p.contact {left: 10px;}
+#footer p.contact em {font-weight: 700; color: #000000;}
+#footer p.copyright {font-size: 8px; left: 214px;}
+
+#footer ul.site {position: absolute; bottom: 30px; right: 10px;}
+#footer ul.site li {display: inline-block; padding: 0 5px; width: 15px;}
+
+#footer > a {position: absolute; bottom: 10px; left: 10px; font-size: 9px; color: #666666; font-weight: 700; display: block; line-height: 32px; height: 32px; }
+#footer > a img {width: 38px; padding-right: 5px;}
