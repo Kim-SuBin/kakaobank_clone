@@ -54,11 +54,14 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 #main p {font-size: 14px; padding: 20px 0; line-height: 1.7; color: #666666;}
 #main div.content_box {position: absolute; left: 50%; transform: translate(-50%, 0); top: 0; width: 100%; height: 100%;}
 #main div.section_line {position: relative; height: 16px; background: #fafafa;}
+#main div.content {position: absolute; top: 60px; text-align: center; width: 100%;}
+#main a {display: inline-block; background: #f6f6f6; width: 210px; height: 48px; line-height: 48px; text-align: center; margin-top: 20px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; font-size: 15px; color: #333333;}
+#main a:hover {text-decoration: underline;}
+
 
 #main-appstore {position: relative; top: 60px; left: 0; width : 100%; height: 650px; background: #fede22}
 #main-appstore span.img1 img {position: absolute; width: 220px; top: 130px; left: 50%; transform: translate(-50%, 0);}
 #main-appstore span.img2 img {position: absolute; width: 330px; bottom: 0; left: 50%; transform: translate(-50%, 0);}
-#main-appstore div.content {position: absolute; top: 50px; text-align: center; width: 100%;}
 #main-appstore h3 {font-size: 40px; color: #333333;}
 #main-appstore p {display: none;}
 #main-appstore a {display: inline-block; background: white; width: 180px;  height: 58px; line-height: 57px; text-align: center; margin-top: 400px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; font-weight: 700; font-size: 17px; color: #333333;}
@@ -66,16 +69,49 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 #main-appstore a > img {padding-right: 10px;}
 #main-appstore a:hover {text-decoration: underline;}
 
+#main-withdrawal {position: relative; top: 0; left: 0; width: 100%; height: 810px; margin-top: 80px;}
+#main-withdrawal img {position: absolute; width: 319px; bottom: 30px; left: 50%; transform: translate(-50%, 0);}
+
+#main-savings {position: relative; top: 0; left: 0; width: 100%; height: 720px;}
+#main-savings h3 {font-size: 26px;}
+#main-savings a {display: inline-block; background: #f6f6f6; width: 158px; height: 48px; line-height: 48px; text-align: center; margin-top: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; font-size: 15px; color: #333333;}
+#main-savings a:hover {text-decoration: underline;}
+#main-savings a + a {margin-left: 5px;}
+#main-savings img {position: absolute; width: 289px; bottom: 0; left: 50%; transform: translate(-50%, 0);}
+
+#main-moim {position: relative; top: 0; left: 0; width: 100%; height: 730px;}
+#main-moim img {position: absolute; width: 268px; bottom: 30px; left: 50%; transform: translate(-50%, 0);}
+
+#main-26weeks {position: relative; top: 0; left: 0; width: 100%; height: 697px;}
+#main-26weeks img {position: absolute; width: 351px; bottom: 70px; left: 50%; transform: translate(-50%, 0);}
+
+#main-foreignRemittance {position: relative; top: 0; left: 0; width: 100%; height: 900px;}
+#main-foreignRemittance img.map {position: absolute; bottom: 130px; left: 50%; transform: translate(-50%, 0);}
+#main-foreignRemittance img.main-foreignRemittance {position: absolute; width: 289px; bottom: 30px; left: 50%; transform: translate(-50%, 0);}
 
 
+#main-loan {position: relative; top: 0; left: 0; width: 100%; height: 800px; background: #333b58;}
+#main-loan a {width: 159px; background: rgba(255,255,255,0.09); color: white; margin: 5px;}
+#main-loan img {position: absolute; width: 350px; bottom: 0; left: 50%; transform: translate(-50%, 0);}
+#main-loan h3 {color: white; font-size: 26px;}
+#main-loan p {color: white;}
 
-#main-withdrawal {position: relative; top: 0; left: 0; width: 100%; height: 700px; margin-top: 80px;}
-#main-savings {display: none;}
-#main-moim {display: none;}
-#main-26weeks {display: none;}
-#main-foreignRemittance {display: none;}
-#main-loan {display: none;}
-#main-card {display: none;}
-#main-it {display: none;}
+#main-card {position: relative; top: 0; left: 0; width: 100%; height: 640px;}
+#main-card .prev {position: absolute; top: 70%; transform: translate(0, -70%); left: 10%; width: 20px; background: none;}
+#main-card .next {position: absolute; top: 70%; transform: translate(0, -70%); right: 10%; width: 20px; background: none;}
+
+#main-card div ul li img {position: absolute; display: none; bottom: 30px; left: 50%; transform: translate(-50%, 0); width: 177px; height: 280px;}
+
+/* 이미지 슬라이드 넣기 */
+/* center */
+#main-card div ul li.center img {display: block; z-index: 1;}
+/* left */
+#main-card div ul li.left img {display: block; left: 34%; bottom: 60px; width: 137px; height: 215px;}
+/* right */
+#main-card div ul li.right img {display: block; left: 66%; bottom: 60px; width: 137px; height: 215px;}
+
+#main-it {position: relative; top: 0; left: 0; width: 100%; height: 1062px; background: #f9f9f9;}
+
+
 
 #footer {display: none;}
