@@ -110,8 +110,17 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 /* right */
 #main-card div ul li.right img {display: block; left: 66%; bottom: 60px; width: 137px; height: 215px;}
 
-#main-it {position: relative; top: 0; left: 0; width: 100%; height: 1062px; background: #f9f9f9;}
-
+#main-it {position: relative; top: 0; left: 0; width: 100%; height: 1109px; background: #f9f9f9;}
+#main-it h3 {position: absolute; display: block; left: 50%; transform: translate(-50%,0); text-align: center; top: 60px;}
+#main-it h3::after {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: -40px; width: 30%; height: 1px; background: black;}
+#main-it ul {position: relative; display: block; width: 100%; left: 0px; text-align: center; height: 210px;}
+#main-it ul li {position: absolute; display: block; width: 100%; top: 200px}
+#main-it ul li:nth-child(2) {margin-top: 300px;}
+#main-it ul li:nth-child(3) {margin-top: 600px;}
+#main-it ul li + li::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); top: -20%; width: 70%; height: 1px; background: lightgray;}
+#main-it ul li img {width: 100px; display: block; position: relative; left : 50%; transform: translate(-50%, 0); margin-bottom: 20px;}
+#main-it ul li strong {font-size: 18px; color: #000000;}
+#main-it ul li p {font-size: 14px;}
 
 
 #footer {display: none;}
