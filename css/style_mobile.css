@@ -42,9 +42,11 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 #gnb > ul > li > a {position: relative; display: block; box-sizing: border-box; margin: 0 20px; padding: 20px 0; font-size: 17px;}
 #gnb > ul > li > a::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 1px; background: lightgray;}
 
-.nav-sub-item > a {background: pink; margin : 0 20px; display: block; box-sizing: border-box; margin: 0 20px; padding: 10px 0; font-size: 15px; margin-top: 5px;}
+.nav-sub-item > a {margin : 0 20px; display: block; box-sizing: border-box; margin: 0 20px; padding: 10px 0; font-size: 15px; margin-top: 5px;}
 .nav-sub-item > ul {margin: 0 20px; background: #F7F7F7;}
-.nav-sub-item > ul > li {background: yellow; display: block; box-sizing: border-box;  padding: 5px 0; font-size: 12px; margin-left: 10px; margin-top: 5px;}
+.nav-sub-item > ul > li {position: relative; display: block; box-sizing: border-box; padding: 5px 0; font-size: 12px; margin-left: 10px; margin-top: 5px;}
+.nav-sub-item > ul > li::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 1px; background: white;}
+#gnb a:hover {text-decoration: underline;}
 
 /* 네비게이션바는 어떻게 구현할지에 대해 조금 더 생각해보기!!!!!!! */
 
