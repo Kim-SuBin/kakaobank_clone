@@ -16,6 +16,7 @@
     <link href="css/style_mobile.css" rel="stylesheet" media="screen and (max-width : 850px)" />
     <link href="css/web_font.css" rel="stylesheet" />
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/common.js"></script>
 </head>
 
 <body>
@@ -360,18 +361,8 @@
 <script>
 'use strict';
 
-$('.gnb_title').on('mouseenter focus', function(){
-    // 기존의 서브 gnb는 보여주지 않음
-    $('.nav-sub').css({'display' : 'none'});
-    $(this).next().css({'display': 'table'});
-    $('#header').addClass('open');
-});
-
-// 보이던 gnb가 안보이도록 설정
-$('#header').on('mouseleave', function(){
-	$('#gnb > ul > li > ul').css({'display' : 'none'});
-$('#header').removeClass('open');
-});
+$('.nav-sub').css({'display' : 'none'});
+setGNB();
 
 //  카드 이미지 변경
 var numSlide = $('#main-card div.content_box ul.slide li').length;
