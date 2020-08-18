@@ -55,12 +55,6 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 .nav-sub-item > ul > li {margin: 20px 0; font-size: 13px;}
 .nav-sub-item > ul > li:hover {text-decoration: underline;} 
 
-/* 마우스가 올라오면 보이도록 설정 */
-.sub1, .sub2, .sub3 {display: none;}
-li.table1:hover > ul.sub1 {display: table;}
-li.table2:hover > ul.sub2 {display: table;}
-li.table3:hover > ul.sub2 {display: table;}
-
 
 /* main */
 #main h3 {font-size: 40px; line-height: 1.35; color: #111111;}
