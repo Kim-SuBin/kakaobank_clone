@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;700&display=swap"
         rel="stylesheet" />
     <link href="../fa/css/all.min.css" rel="stylesheet" />
-    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/identity_style.css" rel="stylesheet" />
     <!-- <link href="../css/style.css" rel="stylesheet" media="screen and (min-width : 851px)" />
     <link href="../css/style_mobile.css" rel="stylesheet" media="screen and (max-width : 850px)" /> -->
     <link href="../css/web_font.css" rel="stylesheet" />
@@ -175,12 +175,23 @@
 
         <main id="main">
             <section id="main-bank">
-                <h3>일상에서 더 쉽게, 더 자주 이용하는<br />나만의 은행</h3>
-                <p>
-                    카카오뱅크는 사람과 은행의 만남을 더 쉽게, 더 자주 일어나야 한다고 믿습니다.<br />
-                    사용자 중심의 혁신적인 기술을 통해 일상 속 어떤 순간에서도 유용한 나만의 은행.<br />
-                    카카오뱅크는 또 하나의 은행이 아닌 '은행의 새로운 시작'입니다.
-                </p>
+                <div class="content">
+                    <h3>일상에서 더 쉽게, 더 자주 이용하는<br />나만의 은행</h3>
+                    <p>
+                        카카오뱅크는 사람과 은행의 만남을 더 쉽게, 더 자주 일어나야 한다고 믿습니다.<br />
+                        사용자 중심의 혁신적인 기술을 통해 일상 속 어떤 순간에서도 유용한 나만의 은행.<br />
+                        카카오뱅크는 또 하나의 은행이 아닌 '은행의 새로운 시작'입니다.
+                    </p>
+                </div>
+                <div class="image-slide">
+                    <p class="dummy"><img alt="" src="../img/brand_img_slide_1.jpg" /></p>
+                    <ul class="slide">
+                        <li><img alt="" src="../img/brand_img_slide_1.jpg" /></li>
+                        <li><img alt="" src="../img/brand_img_slide_2.jpg" /></li>
+                        <li><img alt="" src="../img/brand_img_slide_3.jpg" /></li>
+                        <li><img alt="" src="../img/brand_img_slide_4.jpg" /></li>
+                    </ul>
+                </div>
             </section>
             <section id="main-history">
                 <ul>
@@ -254,7 +265,7 @@
             <section id="main-brand_mv">
                 <h4>브랜드 영상</h4>
             </section>
-            
+
             <section id="main-BI">
                 <h4>BI소개</h4>
                 <p>
@@ -293,11 +304,53 @@
 </body>
 
 <script>
-    'use strict';
+'use strict';
+setImageSlide('div.image-slide', 1, 3000);
 
-    // common
-    $('.nav-sub').css({ 'display': 'none' });
-    setGNB();
+function setImageSlide(selector, first, speed) {
+    var numSlide = $(selector).find('ul.slide li').length;
+    var slideNow = 0;
+    var slideNext = 0;
+    var slideFirst = first;
+    var timerId = null;
+    var timerSpeed = speed;
+    var onAnimation = false;
+
+    // 초기화
+    
+    showSlide(slideFirst, 'change');
+    
+    function showSlide(n, direction) {
+        if (onAnimation === true) return false;
+        
+        if (direction === 'change') {
+            resetSlide(n);
+        } else {
+            var offsetLeft = 0;
+            if (direction === 'next') {
+                offsetLeft = -100;
+            }
+            onAnimation = true;
+            $(selector).find('ul.slide').css({'transition': 'left 0.3s', 'left': offsetLeft + '%'}).one('transitionend', function() {
+                resetSlide(n);
+                onAnimation = false;
+            });
+        }
+        timerId = setTimeout(function() {showSlide(slideNext, 'next');}, timerSpeed);
+    }
+    
+    function resetSlide(n) {
+        slideNow = n;
+        slideNext = (n >= numSlide) ? 1 : (n + 1);
+        
+        $(selector).find('ul.slide').css({'transition': 'none', 'left': 0});
+        $(selector).find('ul.slide li').css({'left': 0, 'display': 'none'});
+        $(selector).find('ul.slide li:eq(' + (slideNow - 1) + ')').css({'left': 0, 'display': 'block'});
+        $(selector).find('ul.slide li:eq(' + (slideNext - 1) + ')').css({'left': '100%', 'display': 'block'});
+    }
+}
+
+
 </script>
 
 </html>
