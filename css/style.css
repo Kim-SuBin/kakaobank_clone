@@ -56,6 +56,26 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 .nav-sub-item > ul > li:hover {text-decoration: underline;} 
 
 
+/* footer */
+#footer {position: relative; background: #eeeeee; height: 160px;}
+#footer ul.content {position: absolute; width: 100%; top: 35px; left: 90px; font-size: 11px; color: #666666;}
+#footer ul.content li {position: relative; display: inline-block; padding: 0 20px; height: 20px; line-height: 20px;}
+#footer ul.content li a.bold {font-weight: 700; color: #000000;}
+#footer ul.content li > a:hover {text-decoration: underline;}
+#footer ul.content li + li > a::before {content: ''; position: absolute; left: 0; width: 1px; height: 100%; background: lightgray;}
+
+#footer p {position: absolute; display: inline-block; top: 72px; font-size: 11px; color: #888888;}
+#footer p.contact {left: 110px;}
+#footer p.contact em {font-weight: 700; color: #000000;}
+#footer p.copyright {font-size: 10px; left: 27%;}
+
+#footer ul.site {position: absolute; bottom: 30px; right: 100px;}
+#footer ul.site li {display: inline-block; padding: 0 5px;}
+
+#footer > a {position: absolute; bottom: 10px; left: 110px; font-size: 13px; color: #666666; font-weight: 700; display: block; line-height: 32px; height: 32px; }
+#footer > a img {width: 48px; padding-right: 10px;}
+
+
 /* main */
 #main h3 {font-size: 40px; line-height: 1.35; color: #111111;}
 #main p {font-size: 15px; padding: 20px 0; line-height: 1.7; color: #666666;}
@@ -141,22 +161,3 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 #main-it ul li p {font-size: 14px;}
 #main-it ul li:nth-child(2) {margin-left: -10px;}
 #main-it ul li:last-child {margin-left: 260px;}
-
-/* footer */
-#footer {position: relative; background: #eeeeee; height: 160px;}
-#footer ul.content {position: absolute; width: 100%; top: 35px; left: 90px; font-size: 11px; color: #666666;}
-#footer ul.content li {position: relative; display: inline-block; padding: 0 20px; height: 20px; line-height: 20px;}
-#footer ul.content li a.bold {font-weight: 700; color: #000000;}
-#footer ul.content li > a:hover {text-decoration: underline;}
-#footer ul.content li + li > a::before {content: ''; position: absolute; left: 0; width: 1px; height: 100%; background: lightgray;}
-
-#footer p {position: absolute; display: inline-block; top: 72px; font-size: 11px; color: #888888;}
-#footer p.contact {left: 110px;}
-#footer p.contact em {font-weight: 700; color: #000000;}
-#footer p.copyright {font-size: 10px; left: 27%;}
-
-#footer ul.site {position: absolute; bottom: 30px; right: 100px;}
-#footer ul.site li {display: inline-block; padding: 0 5px;}
-
-#footer > a {position: absolute; bottom: 10px; left: 110px; font-size: 13px; color: #666666; font-weight: 700; display: block; line-height: 32px; height: 32px; }
-#footer > a img {width: 48px; padding-right: 10px;}
