@@ -1,6 +1,7 @@
 // DinoWorks Common JS
 $(document).ready(function(){
     preventDefaultAnchor();
+    $('.nav-sub').css({ 'display': 'none'});
     setGNB();
     
 });
