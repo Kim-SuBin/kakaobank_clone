@@ -28,10 +28,9 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 #skip-nav:focus {top: 0;}
 
 /* header */
-#header {position: fixed; top: 0; left: 0; height: 80px; width: 100%; min-width: 1024px; background: white; z-index: 1000;}
+#header {position: fixed; top: 0; left: 0; height: 80px; width: 100%; min-width: 1024px; background: #313955; z-index: 1000;}
 #header::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 1px; background: lightgray;}
 #header h1 {position: absolute; left: 100px; display: inline-block; width: 110px; height: 80px; z-index: 1100; top: 14px;}
-
 
 
 /* navigation bar */
@@ -44,6 +43,8 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 #gnb > ul > li > a.gnb_title:hover {text-decoration: underline;}
 #gnb .gnb_button {background: #fede22; width: 150px; top: 15px; height: 50px; line-height: 50px; border-bottom-left-radius: 30px; border-top-left-radius: 30px; border-bottom-right-radius: 30px; border-top-right-radius: 30px;}
 #gnb > ul > li > ul {position: absolute; left: 0; width: 100%; box-sizing: border-box; padding: 40px 30px; background: white;}
+
+.gnb_title {color: white;}
 
 /* 구현이 어려워 웹페이지 참고 */
 .nav-sub {display: table; width: 1080px; margin: auto; }
@@ -74,3 +75,24 @@ body {font-family: 'NotoSansKR', '맑은 고딕', 'malgun gothic', '돋움', Dot
 
 #footer > a {position: absolute; bottom: 10px; left: 110px; font-size: 13px; color: #666666; font-weight: 700; display: block; line-height: 32px; height: 32px; }
 #footer > a img {width: 48px; padding-right: 10px;}
+
+/* main */
+#main {background: #fafafa;}
+#main div.content_box {position: absolute; left: 50%; transform: translate(-50%, 0); top: 0; width: 1150px; height: 100%; box-sizing: border-box; padding: 50px 0;}
+#main div.content_box::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 1px; background: #d0d0d0;}
+#main h4 {font-size: 19px; position: absolute; display: block; width: 30%; top: 50%; transform: translate(0, -50%);}
+
+#main-info {position: relative; top: 150px; left: 0; width : 100%; height: 550px;}
+#main-info h3 {display: block; position: relative; font-size: 27px; font-weight: 400; padding-bottom: 40px;}
+#main-info h3::before {content: ''; position: absolute; left: 50%; transform: translate(-50%, 0); bottom: 0; width: 100%; height: 1px; background: #d0d0d0;}
+#main-info div.content {display: block; position: absolute; width: 590px; height: 350px; background: url(../img/consortium_circle.png) no-repeat; left: 50%; transform: translate(-50%, 0); top: 166px;}
+#main-info div.content p {display: inline-block; font-size: 21px; position: absolute; top: 50%; transform: translate(0, -50%); text-align: center;}
+#main-info div.content p:first-child {left: 12%;}
+#main-info div.content p:last-child {left: 58%;}
+
+#main-finance {position: relative; top: 150px; left: 0; width : 100%; height: 400px;}
+#main-service {position: relative; top: 150px; left: 0; width : 100%; height: 400px; margin-bottom: 250px;}
+#main-finance ul, #main-service ul {position: absolute; left: 30%; width: 70%; top: 50%; transform: translate(0, -50%); font-size: 12px;}
+#main-finance ul li, #main-service ul li {position: relative; display: inline-block; width: 49%; margin: 20px 0;}
+#main-finance ul li:nth-child(2n-1), #main-service ul li:nth-child(2n-1) {margin-right: 1%;}
+#main-finance ul li img, #main-service ul li img {padding-bottom: 10px;}
