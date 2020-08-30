@@ -264,6 +264,60 @@
 
             <section id="main-brand_mv">
                 <h4>브랜드 영상</h4>
+                <ul class="slide">
+                    <li>
+                        <a href="#" class="mv">
+                            <em class="mv_title">[카카오뱅크 TV-CF] 광고 볼 시간에</em>
+                            <img alt="" src="../img/brand_movie_1.png" class="mv_bg"/>
+                            <img alt="play button" src="../img/mv_play.png" class="mv_play"/>
+                        </a>
+                        <div class="content">
+                            <strong># 은행 상담편</strong>
+                            광고 볼 시간에, 카카오뱅크 은행 상담<br />
+                            언제 어디서나 카톡으로 은행 상담
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="mv">
+                            <em class="mv_title">[카카오뱅크 TV-CF] 광고 볼 시간에</em>
+                            <img alt="" src="../img/brand_movie_1.png" class="mv_bg"/>
+                            <img alt="play button" src="../img/mv_play.png" class="mv_play"/>
+                        </a>
+                        <div class="content">
+                            <strong># 은행 상담편</strong>
+                            광고 볼 시간에, 카카오뱅크 은행 상담<br />
+                            언제 어디서나 카톡으로 은행 상담
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="mv">
+                            <em class="mv_title">[카카오뱅크 TV-CF] 광고 볼 시간에</em>
+                            <img alt="" src="../img/brand_movie_1.png" class="mv_bg"/>
+                            <img alt="play button" src="../img/mv_play.png" class="mv_play"/>
+                        </a>
+                        <div class="content">
+                            <strong># 은행 상담편</strong>
+                            광고 볼 시간에, 카카오뱅크 은행 상담<br />
+                            언제 어디서나 카톡으로 은행 상담
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="mv">
+                            <em class="mv_title">[카카오뱅크 TV-CF] 광고 볼 시간에</em>
+                            <img alt="" src="../img/brand_movie_10.jpg" class="mv_bg"/>
+                            <img alt="play button" src="../img/mv_play.png" class="mv_play"/>
+                        </a>
+                        <div class="content">
+                            <strong># 은행 상담편</strong>
+                            광고 볼 시간에, 카카오뱅크 은행 상담<br />
+                            언제 어디서나 카톡으로 은행 상담
+                        </div>
+                    </li>
+                </ul>
+                <p class="control">
+                    <a href="#main-card .control" class="prev"><i class="fas fa-chevron-left"><span>이전</span></i></a>
+                    <a href="#main-card .control" class="next"><i class="fas fa-chevron-right"><span>다음</span></i></a>
+                </p>
             </section>
 
             <section id="main-BI">
@@ -304,51 +358,42 @@
 </body>
 
 <script>
-'use strict';
-setImageSlide('div.image-slide', 1, 3000);
+    'use strict';
+    setImageSlide('div.image-slide', 1, 3000);
 
-function setImageSlide(selector, first, speed) {
-    var numSlide = $(selector).find('ul.slide li').length;
-    var slideNow = 0;
-    var slideNext = 0;
-    var slideFirst = first;
-    var timerId = null;
-    var timerSpeed = speed;
-    var onAnimation = false;
+    function setImageSlide(selector, first, speed) {
+        var numSlide = $(selector).find('ul.slide li').length;
+        var slideNow = 0;
+        var slideNext = 0;
+        var slideFirst = first;
+        var timerId = null;
+        var timerSpeed = speed;
 
-    // 초기화
-    
-    showSlide(slideFirst, 'change');
-    
-    function showSlide(n, direction) {
-        if (onAnimation === true) return false;
-        
-        if (direction === 'change') {
-            resetSlide(n);
-        } else {
-            var offsetLeft = 0;
-            if (direction === 'next') {
-                offsetLeft = -100;
-            }
-            onAnimation = true;
-            $(selector).find('ul.slide').css({'transition': 'left 0.3s', 'left': offsetLeft + '%'}).one('transitionend', function() {
+        showSlide(slideFirst, 'change');
+
+        function showSlide(n, direction) {
+
+            if (direction === 'change') {
                 resetSlide(n);
-                onAnimation = false;
-            });
+            } else { // direction === 'next'
+                var offsetLeft = -100;
+                $(selector).find('ul.slide').css({ 'transition': 'left 0.3s', 'left': offsetLeft + '%' }).one('transitionend', function () {
+                    resetSlide(n);
+                });
+            }
+            timerId = setTimeout(function () { showSlide(slideNext, 'next'); }, timerSpeed);
         }
-        timerId = setTimeout(function() {showSlide(slideNext, 'next');}, timerSpeed);
+
+        function resetSlide(n) {
+            slideNow = n;
+            slideNext = (n >= numSlide) ? 1 : (n + 1);
+
+            $(selector).find('ul.slide').css({ 'transition': 'none', 'left': 0 });
+            $(selector).find('ul.slide li').css({ 'left': 0, 'display': 'none' });
+            $(selector).find('ul.slide li:eq(' + (slideNow - 1) + ')').css({ 'left': 0, 'display': 'block' });
+            $(selector).find('ul.slide li:eq(' + (slideNext - 1) + ')').css({ 'left': '100%', 'display': 'block' });
+        }
     }
-    
-    function resetSlide(n) {
-        slideNow = n;
-        slideNext = (n >= numSlide) ? 1 : (n + 1);
-        
-        $(selector).find('ul.slide').css({'transition': 'none', 'left': 0});
-        $(selector).find('ul.slide li').css({'left': 0, 'display': 'none'});
-        $(selector).find('ul.slide li:eq(' + (slideNow - 1) + ')').css({'left': 0, 'display': 'block'});
-        $(selector).find('ul.slide li:eq(' + (slideNext - 1) + ')').css({'left': '100%', 'display': 'block'});
-    }
-}
 
 
 </script>
